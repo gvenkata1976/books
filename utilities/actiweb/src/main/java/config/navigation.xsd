@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/navigation" xmlns:tns="http://www.example.org/navigation" elementFormDefault="qualified">
+<element name="organization">
+	<complexType >
+		<sequence>
+			<element name="tabs">
+				<complexType>
+					<sequence>
+					<element name="toolbar">
+						<complexType >
+							<sequence>
+							<element name="actions">
+									<complexType >
+										<sequence>
+										<element name="action" minOccurs="1" maxOccurs="8">
+											<complexType >
+												<attribute name="name" type="string"/>
+												<attribute name="value" type="string"/> 
+											</complexType>	
+										</element>
+										</sequence> 
+									</complexType>
+							</element>
+							</sequence>
+						</complexType>
+					</element>
+					
+					<element name="tab" minOccurs="1" maxOccurs="50">
+					<complexType >
+						<attribute name="name" type="string"/>
+						<attribute name="value" type="string"/>
+						<attribute name="parent" type="string"/>
+						<attribute name="default" type="boolean"/>
+						<attribute name="toolbar" type="boolean"/> 
+					</complexType>	
+						<!--attributes name, value, parent, default, toolbar-->
+					</element>
+
+					
+					
+					</sequence>
+				</complexType>			
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

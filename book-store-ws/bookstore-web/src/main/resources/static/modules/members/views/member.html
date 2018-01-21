@@ -1,0 +1,147 @@
+<div class="modal fade" modal-toggle id="membermodal" tabindex="-1"
+	role="dialog" aria-labelledby="membermodalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">New Member</h4>
+			</div>
+			<div class="modal-body">
+				<form name="memberForm" ng-submit="ctrl.submit()"
+					class=" form-horizontal">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="col-xs-12 col-sm-8">
+									<input type="hidden" id="memberId"
+										data-ng-model="ctrl.model.memberId" name="memberId">
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="name" class="col-xs-12 col-sm-4 control-label">Name</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="name" data-ng-model="ctrl.model.name"
+										class="form-control" placeholder="name" required autofocus
+										name="name"> <span
+										data-ng-show=" {{'memberForm.name.$dirty && memberForm.name.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="idType" class="col-xs-12 col-sm-4 control-label">Id
+									Type</label>
+								<div class="col-xs-12 col-sm-8">
+									<select id="idType" class="form-control" data-ng-model="ctrl.model.idType" required>
+										<option value="" selected="selected"></option>
+										<option value="pan">PAN</option>
+										<option value="aadhar">Aadhar</option>
+										<option value="passport">Passport</option>
+
+										<option value="comic"></option>
+									</select><span
+										data-ng-show=" {{'memberForm.idType.$dirty && memberForm.idType.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="idNumber" class="col-xs-12 col-sm-4 control-label">idNumber</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="idNumber"
+										data-ng-model="ctrl.model.idNumber" class="form-control"
+										placeholder="idNumber" required autofocus name="idNumber">
+									<span
+										data-ng-show=" {{'memberForm.idNumber.$dirty && memberForm.idNumber.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="form-group">
+								<label for="interests" class="col-xs-12 col-sm-4 control-label">Interests</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="interests"
+										data-ng-model="ctrl.model.interests" class="form-control"
+										placeholder="interests" required autofocus name="interests">
+									<span
+										data-ng-show=" {{'memberForm.interests.$dirty && memberForm.interests.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="form-group">
+								<label for="email" class="col-xs-12 col-sm-4 control-label">E-mail</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="email" id="email" data-ng-model="ctrl.model.email"
+										class="form-control" placeholder="email" required autofocus
+										name="email"> <span
+										data-ng-show=" {{'memberForm.email.$dirty && memberForm.email.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="phone" class="col-xs-12 col-sm-4 control-label">Phone</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="phone" data-ng-model="ctrl.model.phone"
+										class="form-control" placeholder="phone" required autofocus
+										name="phone"> <span
+										data-ng-show=" {{'memberForm.phone.$dirty && memberForm.phone.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="bloodGroup" class="col-xs-12 col-sm-4 control-label">Blood
+									Group</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="bloodGroup"
+										data-ng-model="ctrl.model.bloodGroup" class="form-control"
+										placeholder="bloodGroup" required autofocus name="bloodGroup">
+									<span
+										data-ng-show=" {{'memberForm.bloodGroup.$dirty && memberForm.bloodGroup.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="memberShipTypeId"
+									class="col-xs-12 col-sm-4 control-label">Member-Ship
+									Type</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="memberShipTypeId"
+										data-ng-model="ctrl.model.memberShipTypeId"
+										class="form-control" placeholder="memberShipTypeId" required
+										autofocus name="memberShipTypeId"> <span
+										data-ng-show=" {{'memberForm.memberShipTypeId.$dirty && memberForm.memberShipTypeId.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="rating" class="col-xs-12 col-sm-4 control-label">Rating</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="rating"
+										data-ng-model="ctrl.model.rating" class="form-control"
+										placeholder="rating" required autofocus name="rating">
+									<span
+										data-ng-show=" {{'memberForm.rating.$dirty && memberForm.rating.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+
+
+					<br /> <br />
+					<div class="row">
+						<div class="col-md-6">&nbsp;</div>
+						<div class="col-md-6">
+							<button id="submit" class="btn btn-primary" type="button"
+								ng-click="ctrl.submit(ctrl.event+'Member');">Submit</button>
+							<button id="reset" class="btn btn-secondary" type="button"
+								ng-click="ctrl.resetMember();">Reset</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

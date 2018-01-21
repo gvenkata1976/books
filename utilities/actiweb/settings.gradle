@@ -1,0 +1,3 @@
+/*include 'common-utilities'
+project(':common-utilities').projectDir = new File(settingsDir, '../common-utilities')*/
+rootProject.name = 'actiweb'

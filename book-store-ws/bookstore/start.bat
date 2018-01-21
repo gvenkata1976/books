@@ -1,0 +1,1 @@
+gradle bootRun -Dspring.config.location=D:\workspace\book-store-ws\books.properties -Dlogging.config=D:\workspace\book-store-ws\logback.xml -Dlog_file_name=books

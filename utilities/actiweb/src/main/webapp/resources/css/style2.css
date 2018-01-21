@@ -1,0 +1,43 @@
+.DataLink {
+	position: relative;
+}
+
+.Data {
+	cursor: pointer;
+	display: inline;
+	position: absolute;
+	visibility: hidden;
+	background-color: #eeee90;
+	border-radius: 3px;
+	color: #000000;
+	text-align: left;
+	font-weight: normal;
+	z-index: 999;
+}
+
+th .gradient2 {
+	font-size: 12px;
+	height: 15px;
+}
+
+.gradient2 {
+	background-color: #eeefff;
+}
+
+.DataLink:hover .Data {
+	visibility: visible;
+}
+
+table .popup {
+	color: black;
+	valign: top;
+	border: 1px solid #ffffff;
+	background: transparent;
+	padding: 2px;
+	border-spacing: 5px;
+	border-collapse: separate;
+}
+
+.ui-icon-circle-close {
+	cursor: pointer;
+}

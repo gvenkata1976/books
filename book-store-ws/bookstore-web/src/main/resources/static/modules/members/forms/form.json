@@ -1,0 +1,106 @@
+{
+	"name": "Add",
+	"initialValues": {
+		"id ": "",
+		"memberId ": "",
+		"name": "",
+		"idType": "",
+		"idNumber": "",
+		"interests": [],
+		"email": "",
+		"phone": "",
+		"bloodGroup": "",
+		"memberShipTypeId": "", 
+		"rating": ""
+	},
+	"fields": [
+		{
+			"type": "text",
+			"name": "memberId",
+			"label": "Member Id",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "name",
+			"label": "Name",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "select",
+			"name": "idType",
+			"label": "Id Type",
+			"required": true,
+			"data": "",
+			"options": [
+				{
+					"name": "PAN"
+				},
+				{
+					"name": "Aadhar"
+				},
+				{
+					"name": "Passport"
+				} 
+			]
+		},
+		{
+			"type": "text",
+			"name": "idNumber",
+			"label": "Id Number",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "interests",
+			"label": "Interests",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "email",
+			"label": "E-mail",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "phone",
+			"label": "Phone",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "bloodGroup",
+			"label": "Blood Group",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "memberShipTypeId",
+			"label": "MemberShip Type Id",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "rating",
+			"label": "Rating",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "id",
+			"label": "id",
+			"required": true,
+			"data": ""
+		}
+	]
+}

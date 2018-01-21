@@ -1,0 +1,74 @@
+members/registration
+  name, idproof, address, interests, email, phone, member.id ,membershiptypeid,bloodgroup,membertype(customer,publisher,vendor),rating
+books
+ name, author, publisher, price, id, discounts, count,barcode,id, language,status,category
+coupons
+ id, provider, type, discount
+employees
+ id, firstname, lastname doj, total.ex, exp.in, address, bloodgroup, designation, location,branch 
+branch
+ id, name, address, spc 
+ user
+  id, name, loginid, password, email, phone, active
+ roles
+ id, designation, role
+@ForeignKey( name = "none" )
+ idproof 
+ id, type, desc
+ membertype(customer,publisher,vendor)
+ SubscriptionType
+ membershiptypeid, type (month,semi, year,guest), price
+ 
+ 
+rentals
+ bookid, memberid, startdate, returndate, status, delay
+payments
+ billno, purchase/membership, amount,discount
+billing
+ billid,  bookid, memberid, couponid
+cart
+ memberid, bookid
+wishlist
+ memberid, bookid
+profit-loss
+ calculate from books
+rating
+ bookid, memberid, rating 
+orders
+ orderid, bookid, date, expdeliverydate,cost,condition,vendorid
+ branch_books
+ branchid, bookid, count
+suggestions
+ id, memberid,comments, resolution
+
+search books in other branches?(branch.location vs member.address.location)
+gateway - done
+rest security - todo
+ notifications 
+search using elastic/solr
+ login
+ 
+ start all rest at once?
+ 
+ 
+ security for rest, with zuul no host in script
+ ui for rest created
+ 
+ ui with scheduling tasks
+  
+ 
+ bootstrap angular
+npm angular, bower, package
+menus
+login
+dashboard with charts sales data
+table sorting pagination
+cache
+
+dynaform json service
+
+
+dfs
+
+sdf
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization xmlns="http://www.example.org/navigation" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/navigation navigation.xsd ">
+  <tabs>
+	<toolbar>
+			<actions>
+					<action name="add" value="Add" />
+					<action name="refresh" value="Refresh" />
+			</actions>
+		</toolbar>
+		<tab name="employee" value="Home" default="true" toolbar="false" />
+		<tab name="employee" value="Search" />
+		<tab name="employee" value="Employee" />
+		<tab name="employee" value="Reports" />
+		<tab name="employee" value="Tools" />
+		 
+		<tab name="user" value="User" parent="tools"/>
+		<tab name="role" value="Role" parent="tools"/>
+		<tab name="function" value="Function" parent="tools"/>
+		<tab name="country" value="Country" parent="tools"/>
+		<tab name="region" value="Region" parent="tools"/>
+		<tab name="department" value="Department" parent="tools"/>
+  </tabs>
+</organization>

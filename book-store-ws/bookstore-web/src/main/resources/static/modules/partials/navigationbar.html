@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" ng-href="#brand"><div class="app-logo">B</div></a>
+		</div>
+		<ul class="nav navbar-nav navbar-right">
+			<li class="active"><a ng-href="#shop"
+				ng-show="UserService.isLoggedIn()"><i
+					class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;Shop&nbsp;</a></li>
+			<li class="dropdown"><a class="dropdown-toggle"
+				data-toggle="dropdown" ng-href="#admin"
+				ng-show="UserService.isAdminRole()"><i class="fa fa-cog fa-fw"></i>&nbsp;Administration&nbsp;<span
+					class="caret"></span> </a>
+				<ul class="dropdown-menu">
+					<li><a ng-href="#books"><i class="fa fa-book fa-fw"></i>Books</a></li>
+					<li><a ng-href="#members"><i class="fa fa-users"
+							aria-hidden="true"></i>Members</a></li>
+					<li><a ng-href="#employees"><i class="fa fa-black-tie"
+							aria-hidden="true"></i>Employees</a></li>
+					<li><a ng-href="#tasks"> <i class="fa fa-tasks"
+							aria-hidden="true"></i>Tasks
+					</a></li>
+				</ul></li>
+			<li><a ng-href="#about" ng-show="UserService.isLoggedIn()"><i
+					class="fa fa-building" aria-hidden="true"></i>&nbsp;About&nbsp;</a></li>
+			<li><a ng-href="#contacts" ng-show="UserService.isLoggedIn()"><i
+					class="fa fa-address-card" aria-hidden="true"></i>&nbsp;Contact&nbsp;</a></li>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a ng-controller="SignupController as ctrl"
+					ng-href="#signup" ng-show="!UserService.isLoggedIn()"><span
+						class="glyphicon glyphicon-user"></span>&nbsp;Sign Up&nbsp;</a></li>
+				<li><a ng-controller="LoginController as ctrl" ng-href="#login"
+					ng-show="!UserService.isLoggedIn()"><span
+						class="glyphicon glyphicon-log-in"></span>&nbsp;Login&nbsp;</a></li>
+				<li><a ng-controller="LogoutController as ctrl"
+					ng-href='#logout' ng-show="UserService.isLoggedIn()"
+					ng-click="ctrl.logout()"><span
+						class="glyphicon glyphicon-log-out"></span>&nbsp;Logout&nbsp;</a></li>
+			</ul>
+		</ul>
+	</div>
+</nav>
+<div id="overlay" data-loading>
+	<div class="loader"></div>
+</div>

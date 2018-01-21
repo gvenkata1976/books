@@ -1,0 +1,42 @@
+ 
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+ 
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+sourceSets {
+    main {
+        java {
+            srcDir "src/main/java"
+            srcDir "src/main/resources"
+            srcDir "src/main/webapp"
+        }
+    }
+    test {
+        java {
+            srcDir "src/test/java"
+            srcDir "src/test/resources"
+        }
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+    compile 'org.mongodb:mongo-java-driver:2.10.1'
+    compile 'commons-collections:commons-collections:3.2'
+    compileOnly 'javax.servlet:javax.servlet-api:4.0.0-b01' 
+    compile "javax.ws.rs:jsr311-api:1.1"
+    compile "com.sun.jersey:jersey-core:1.9.1"
+    compile "com.sun.jersey:jersey-server:1.9.1"
+    compile "com.sun.jersey:jersey-json:1.9.1" 
+    // Dependency needed for interceptors and filters.
+    compile 'com.sun.jersey.contribs:jersey-contribs:1.19'  
+}
+ 

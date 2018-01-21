@@ -1,0 +1,20 @@
+{
+	"name": "Login",
+	"fields": [
+		{
+			"type": "text",
+			"name": "userId",
+			"label": "User Id",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "password",
+			"name": "inputPassword",
+			"label": "Password",
+			"max": 20,
+			"required": true,
+			"data": ""
+		}
+	]
+}

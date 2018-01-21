@@ -1,0 +1,144 @@
+<div class="modal fade" modal-toggle id="bookmodal" tabindex="-1"
+	role="dialog" aria-labelledby="bookmodalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Book Details</h4>
+			</div>
+			<div class="modal-body">
+				<form name="bookForm" class=" form-horizontal">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="author" class="col-xs-12 col-sm-4 control-label">Author</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="author"
+										data-ng-model="ctrl.model.author" class="form-control"
+										placeholder="author" required autofocus name="author">
+									<span
+										data-ng-show=" {{'bookForm.author.$dirty && bookForm.author.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="barcode" class="col-xs-12 col-sm-4 control-label">BarCode</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="barcode"
+										data-ng-model="ctrl.model.barcode" class="form-control"
+										placeholder="barcode" required autofocus name="barcode">
+									<span
+										data-ng-show=" {{'bookForm.barcode.$dirty && bookForm.barcode.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="category" class="col-xs-12 col-sm-4 control-label">Category</label>
+								<div class="col-xs-12 col-sm-8">
+									<select id="category" data-ng-model="ctrl.model.category"
+										class="form-control" required>
+										<option value="" selected="selected"></option>
+										<option value="fantacy">Fantacy</option>
+										<option value="computers">Computers</option>
+										<option value="science">Science</option>
+										<option value="comic">Comic</option>
+										<option value="fiction">Fiction</option>
+										<option value="history">History</option>
+										<option value="comic"></option>
+									</select><span
+										data-ng-show=" {{'bookForm.category.$dirty && bookForm.category.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<!-- <label for="id" class="col-xs-12 col-sm-4 control-label">Id</label> -->
+								<div class="col-xs-12 col-sm-8">
+									<input type="hidden" id="id" data-ng-model="ctrl.model.id"
+										class="form-control" placeholder="id" name="id">
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="inStock" class="col-xs-12 col-sm-4 control-label">InStock</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="inStock"
+										data-ng-model="ctrl.model.inStock" class="form-control"
+										placeholder="inStock" required autofocus name="inStock">
+									<span
+										data-ng-show=" {{'bookForm.inStock.$dirty && bookForm.inStock.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="language" class="col-xs-12 col-sm-4 control-label">Language</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="language"
+										data-ng-model="ctrl.model.language" class="form-control"
+										placeholder="language" required autofocus name="language">
+									<span
+										data-ng-show=" {{'bookForm.language.$dirty && bookForm.language.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="name" class="col-xs-12 col-sm-4 control-label">Name</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="name" data-ng-model="ctrl.model.name"
+										class="form-control" placeholder="name" required autofocus
+										name="name"> <span
+										data-ng-show=" {{'bookForm.name.$dirty && bookForm.name.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="pages" class="col-xs-12 col-sm-4 control-label">Pages</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="pages" data-ng-model="ctrl.model.pages"
+										class="form-control" placeholder="pages" required autofocus
+										name="pages"> <span
+										data-ng-show=" {{'bookForm.pages.$dirty && bookForm.pages.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="price" class="col-xs-12 col-sm-4 control-label">Price</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="price" data-ng-model="ctrl.model.price"
+										class="form-control" placeholder="price" required autofocus
+										name="price"> <span
+										data-ng-show=" {{'bookForm.price.$dirty && bookForm.price.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<label for="publisher" class="col-xs-12 col-sm-4 control-label">Publisher</label>
+								<div class="col-xs-12 col-sm-8">
+									<input type="text" id="publisher"
+										data-ng-model="ctrl.model.publisher" class="form-control"
+										placeholder="publisher" required autofocus name="publisher">
+									<span
+										data-ng-show=" {{'bookForm.publisher.$dirty && bookForm.publisher.$error.required'}}">Required!</span>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<br /> <br />
+					<div class="row">
+						<div class="col-md-6">&nbsp;</div>
+						<div class="col-md-6">
+							<button id="submit" class="btn btn-primary" type="submit"
+								ng-click="ctrl.submit()"  data-dismiss="modal">Submit</button>
+							<button id="reset" class="btn btn-secondary" type="reset"
+								ng-click="ctrl.resetBook();">Reset</button>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

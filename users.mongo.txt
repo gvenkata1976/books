@@ -1,0 +1,24 @@
+db.users.insert({ 
+'userName':'ganesh',
+'password':'ganesh',
+'accountNonExpired':'false',
+'accountNonLocked':'true',
+'credentialsNonExpired':'true',
+'enabled':'true',
+'roles' : ['ROLE_USER','ROLE_ADMIN']
+});
+db.users.insert({ 
+'userName':'john',
+'password':'john',
+'accountNonExpired':'false',
+'accountNonLocked':'true',
+'credentialsNonExpired':'true',
+'enabled':'true',
+'roles' : ['ROLE_USER']
+});
+
+db.users.updateMany( {}, { $rename: { "accountExpired": "accountNonExpired" } } );
+
+db.users.updateMany( {},   { $set: { "accountNonExpired" : true } }  );
+
+db.users.update( {'userName':'john'},   { $set: { "roles" : ['ROLE_USER'] } }  );

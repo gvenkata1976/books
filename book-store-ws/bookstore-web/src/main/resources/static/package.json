@@ -1,0 +1,15 @@
+{
+  "name": "bookstore-web",
+  "namelower": "bookstore-web",
+  "version": "0.0.1",
+  "description": "book store project",
+  "keywords": [
+    "books"
+  ],
+  "author": "ganesh",
+  "license": "MIT", 
+  "scripts": {
+    "postinstall": "bower install"
+  },
+  "private": true
+}

@@ -1,0 +1,110 @@
+{
+	"name": "Add",
+	"initialValues": {
+		"author": "",
+		"barcode": "",
+		"category": "",
+		"id": "",
+		"inStock": false,
+		"language": "",
+		"name": "",
+		"pages": 0,
+		"price": 0,
+		"publisher": "" 
+	},
+	"fields": [
+		{
+			"type": "text",
+			"name": "author",
+			"label": "Author",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "barcode",
+			"label": "Bar Code",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "select",
+			"name": "category",
+			"label": "Category",
+			"required": true,
+			"data": "",
+			"options": [
+				{
+					"name": "Fantasy"
+				},
+				{
+					"name": "Computers"
+				},
+				{
+					"name": "Comic"
+				},
+				{
+					"name": "Literature"
+				},
+				{
+					"name": "Cartoon"
+				},
+				{
+					"name": "Engineering"
+				},
+				{
+					"name": "Medical"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"name": "id",
+			"label": "Id",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "inStock",
+			"label": "In Stock",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "language",
+			"label": "Language",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "name",
+			"label": "Name",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "pages",
+			"label": "Pages",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "price",
+			"label": "Price",
+			"required": true,
+			"data": ""
+		},
+		{
+			"type": "text",
+			"name": "publisher",
+			"label": "Publisher",
+			"required": true,
+			"data": ""
+		} 
+	]
+}

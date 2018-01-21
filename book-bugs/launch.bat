@@ -1,0 +1,2 @@
+cd D:\workspace\book-bugs\%1-service\  
+gradle -Dspring.config.location=D:\workspace\book-bugs\configs\%1.properties -Dlogging.config=D:\workspace\book-bugs\configs\logback.xml -Dlog_file_name=%1.log bootRun

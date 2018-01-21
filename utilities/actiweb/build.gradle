@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp' 
+
+def springVersion = '4.2.4.RELEASE'
+def jdkVersion = '1.8'
+def junitVersion = '4.12'   
+def jstlVersion = '1.2'
+def servletApiVersion = '3.1.0'
+def hibernateVersion = '5.2.9.Final'
+def commonUtilVersion = '0.0.1'
+def jspApiVersion = '2.2'
+
+repositories {
+  mavenCentral()
+  mavenLocal()
+  jcenter()
+}
+sourceCompatibility = jdkVersion
+targetCompatibility = jdkVersion
+
+sourceSets.main.java.srcDirs = ['src/main/java','src/main/resources'] 
+sourceSets.main.output.classesDir = file("classes")
+
+configurations {  
+    all*.exclude module: "slf4j-log4j12"
+    all*.exclude module: "org.springframework:spring-core"
+}
+dependencies {
+  compile 'org.springframework:spring-webmvc:' + springVersion
+  compile 'org.springframework:spring-orm:' + springVersion 
+  compile files('libs/ojdbc7.jar')
+  providedCompile 'javax.servlet:javax.servlet-api:' + servletApiVersion 
+  compile 'javax.servlet:jstl:' + jstlVersion
+  compile 'javax.servlet.jsp.jstl:jstl-api:' + jstlVersion
+  compile 'org.hibernate:hibernate-core:' + hibernateVersion 
+  compile 'com.actiweb:common-utilities:' +  commonUtilVersion
+  testImplementation 'junit:junit:' + junitVersion 
+}
+
+war {
+  archiveName 'actiweb.war'
+  webXml = file('src/main/webapp/WEB-INF/web.xml') 
+}
+  
+ 

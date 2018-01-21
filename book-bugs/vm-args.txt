@@ -1,0 +1,5 @@
+D:\workspace\book-bugs\configs
+-Dspring.config.location=D:\workspace\book-bugs\configs\books.properties -Dlogging.config=D:\workspace\book-bugs\configs\logback.xml -Dlog_file_name=books.log
+
+-Dspring.config.location=D:\workspace\book-bugs\configs\members.properties -Dlogging.config=D:\workspace\book-bugs\configs\logback.xml -Dlog_file_name=members.log
+

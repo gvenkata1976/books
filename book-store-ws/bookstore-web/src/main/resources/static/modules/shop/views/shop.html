@@ -1,0 +1,33 @@
+<form id="myform">
+	<div class="table-responsive" ng-init="ctrl.listBooks();">
+		<table class="table table-bordered table-condensed table-striped">
+			<thead>
+				<tr>
+					<th></th>
+					<th>Name</th>
+					<th>Author</th>
+					<th>Publisher</th>
+					<th>Price</th>
+					<th>Language</th>
+					<th>Category</th>
+					<th>Available</th>
+					<th>Pages</th> 
+				</tr>
+			</thead>
+			<tr ng-repeat="book in ctrl.bookList">
+				<td><i class="fa fa-cart-plus"></i></td>
+				<td><a data-toggle="modal" data-target="#imagemodal"
+					ng-click="ctrl.setModelAndEvent(book,'view');">{{ book.name }}</a></td>
+				<td>{{ book.author }}</td>
+				<td>{{ book.publisher }}</td>
+				<td>{{ book.price }}</td>
+				<td>{{ book.language }}</td>
+				<td>{{ book.category }}</td>
+				<td ng-if='book.inStock'>Yes</td>
+				<td ng-if='!book.inStock'>Out of Stock</td>
+				<td>{{ book.pages }}</td>
+				
+			</tr>
+		</table>
+	</div>
+</form>

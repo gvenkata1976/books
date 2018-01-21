@@ -1,0 +1,21 @@
+{
+  "name": "bookstore-web",
+  "version": "0.0.1",
+  "dependencies": {
+    "angular": "1.2.16",
+    "angular-route": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-mocks": "1.2.16",
+    "jquery": "1.8.3",
+    "underscore": "1.6.0",
+    "restangular": "1.4.0",
+    "bootstrap": "^3.3.7",
+    "angular-resource": "^1.6.4",
+    "components-font-awesome": "^4.7.0",
+    "angular-cookies": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-bootstrap": "^2.5.0",
+    "angular-base64": "^2.0.5"
+  },
+  "analytics": false
+}

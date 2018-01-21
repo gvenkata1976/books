@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib> 
+<tlibversion>1.0</tlibversion>
+<jspversion>1.1</jspversion>
+<shortname>tabs</shortname>
+<info>Sample taglib for tabs</info>
+<uri>/WEB-INF/tld/tab.tld</uri>
+<tag>
+    <name>view</name>
+    <tagclass>com.actiweb.web.tags.TabHandler</tagclass>
+    <info>Tab view function.</info>
+    <attribute>
+      <name>userRole</name>
+      <required>true</required>
+  	</attribute> 
+	 <attribute>
+	      <name>activeTab</name>
+	      <required>true</required>
+	      <rtexprvalue>true</rtexprvalue>
+	  </attribute> 
+</tag>
+<tag>
+    <name>paginate</name>
+    <tag-class>com.actiweb.web.tags.PageHandler</tag-class>
+    <body-content>empty</body-content>
+     
+    <attribute>
+      <name>next</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>previous</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>uri</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <name>offset</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+    <attribute>
+      <name>count</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+    <attribute>
+      <name>max</name>
+      <rtexprvalue>true</rtexprvalue>
+      <type>int</type>
+    </attribute>
+  </tag>
+ 
+</taglib> 
